@@ -61,7 +61,7 @@ public class FlyoutBehaviorShell : _IssuesUITest
 		App.Tap(FlyoutItem);
 
 #if !IOS && !MACCATALYST // When DisableFlyoutBehavior is set, flyout items become inaccessible via inspection tools, leading to timeout exceptions on both iOS and Catalyst.
-	    
+
 		// make sure you can still open flyout via code if flyout behavior is disabled
 		App.Tap(DisableFlyoutBehavior);
 		App.Tap(EnableBackButtonBehavior);
@@ -87,7 +87,7 @@ public class FlyoutBehaviorShell : _IssuesUITest
 		App.WaitForElement(EnableBackButtonBehavior);
 		App.Tap(EnableBackButtonBehavior);
 		App.Tap(LockFlyoutBehavior);
-		App.WaitForElement(title,"Flyout Locked hiding content");
+		App.WaitForElement(title, "Flyout Locked hiding content");
 		App.Tap(EnableFlyoutBehavior);
 		App.WaitForNoElement(FlyoutItem);
 	}
