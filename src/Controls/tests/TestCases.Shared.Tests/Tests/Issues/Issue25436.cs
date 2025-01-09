@@ -5,7 +5,7 @@ using UITest.Core;
 
 namespace Microsoft.Maui.TestCases.Tests.Issues
 {
-    internal class Issue25436 : _IssuesUITest
+	internal class Issue25436 : _IssuesUITest
 	{
 		public override string Issue => "[.NET 9] Shell Flyout menu not rendering after navigating from a MenuItem page";
 
@@ -26,7 +26,7 @@ namespace Microsoft.Maui.TestCases.Tests.Issues
 #endif
 			VerifyScreenshot();
 		}
-			
+
 	}
 }
 #endif

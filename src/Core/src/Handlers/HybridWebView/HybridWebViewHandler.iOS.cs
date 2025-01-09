@@ -220,7 +220,7 @@ namespace Microsoft.Maui.Handlers
 			}
 
 			[Export("webView:stopURLSchemeTask:")]
-			public void StopUrlSchemeTask(WKWebView webView, IWKUrlSchemeTask urlSchemeTask)
+			public static void StopUrlSchemeTask(WKWebView webView, IWKUrlSchemeTask urlSchemeTask)
 			{
 			}
 		}

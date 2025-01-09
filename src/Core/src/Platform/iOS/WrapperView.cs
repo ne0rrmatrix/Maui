@@ -56,7 +56,7 @@ namespace Microsoft.Maui.Platform
 			get => _maskLayer;
 			set
 			{
-				var layer = GetLayer();
+				var layer = WrapperView.GetLayer();
 
 				if (layer is not null && _maskLayer is not null)
 					layer.Mask = null;
@@ -73,7 +73,7 @@ namespace Microsoft.Maui.Platform
 			get => _backgroundMaskLayer;
 			set
 			{
-				var backgroundLayer = GetBackgroundLayer();
+				var backgroundLayer = WrapperView.GetBackgroundLayer();
 
 				if (backgroundLayer is not null && _backgroundMaskLayer is not null)
 					backgroundLayer.Mask = null;
@@ -291,7 +291,7 @@ namespace Microsoft.Maui.Platform
 			mask ??= MaskLayer = new StaticCAShapeLayer();
 			mask.Path = nativePath;
 
-			var backgroundLayer = GetBackgroundLayer();
+			var backgroundLayer = WrapperView.GetBackgroundLayer();
 
 			// We wrap some controls for certain visual effects like applying background gradient etc.
 			// For this reason, we have to clip the background layer as well if it exists.
@@ -342,7 +342,7 @@ namespace Microsoft.Maui.Platform
 			_borderView.UpdateMauiCALayer(Border);
 		}
 
-		CALayer? GetLayer()
+		static CALayer? GetLayer()
 		{
 			var sublayers = Layer?.Sublayers;
 			if (sublayers is null)
@@ -355,7 +355,7 @@ namespace Microsoft.Maui.Platform
 			return Layer;
 		}
 
-		CALayer? GetBackgroundLayer()
+		static CALayer? GetBackgroundLayer()
 		{
 			var sublayers = Layer?.Sublayers;
 			if (sublayers is null)

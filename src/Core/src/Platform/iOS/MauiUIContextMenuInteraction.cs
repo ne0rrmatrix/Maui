@@ -69,7 +69,7 @@ namespace Microsoft.Maui.Platform
 			{
 			}
 
-			public UIContextMenuConfiguration? GetConfigurationForMenu(UIContextMenuInteraction interaction, CGPoint location)
+			public static UIContextMenuConfiguration? GetConfigurationForMenu(UIContextMenuInteraction interaction, CGPoint location)
 			{
 				if (interaction is MauiUIContextMenuInteraction contextMenu)
 					return contextMenu.GetConfigurationForMenu();
