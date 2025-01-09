@@ -9,8 +9,8 @@ public class Issue4684 : _IssuesUITest
 	{
 	}
 #if ANDROID
-    const string connect="CONNECT";
-    const string control="CONTROL";
+	const string connect = "CONNECT";
+	const string control = "CONTROL";
 #else
 	const string connect = "Connect";
 	const string control = "Control";

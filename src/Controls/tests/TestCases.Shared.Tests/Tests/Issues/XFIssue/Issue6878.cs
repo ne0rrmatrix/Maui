@@ -14,7 +14,7 @@ public class Issue6878 : _IssuesUITest
 	const string StatusLabelText = "Everything is fine 😎";
 	const string TopTab = "Top Tab";
 #if ANDROID
-    const string PostClearTopTab = "POST CLEAR TOP TAB";
+	const string PostClearTopTab = "POST CLEAR TOP TAB";
 #else
 	const string PostClearTopTab = "Post clear Top Tab";
 #endif

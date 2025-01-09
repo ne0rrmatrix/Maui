@@ -643,7 +643,7 @@ namespace Microsoft.Maui.Controls
 
 		Font ITextStyle.Font => this.ToFont();
 
-#if ANDROID	
+#if ANDROID
 		object IContentView.Content 
 		{
 			get

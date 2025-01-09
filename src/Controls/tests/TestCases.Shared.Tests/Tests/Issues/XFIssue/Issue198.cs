@@ -25,18 +25,18 @@ public class Issue198 : _IssuesUITest
 	{
 		App.WaitForElement(PageOne);
 		App.WaitForElement("Leave");
-	
+
 		App.Tap("Leave");
 
 		// Due to the current architecture of the HostApp, we cannot navigate back to the Bug Repro's page.
 		// Also it's not recommended to place a TabbedPage into a NavigationPage.
-	    // App.WaitForElement("Bug Repro's");
+		// App.WaitForElement("Bug Repro's");
 		// App.EnterText("SearchBarGo", "G198");
 		// App.Tap("SearchButton");
-	
+
 		App.WaitForElement(PageThree);
 		App.Tap(PageThree);
-	
+
 		App.WaitForElement("No Crash");
 	}
 }

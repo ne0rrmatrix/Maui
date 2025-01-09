@@ -57,7 +57,7 @@ namespace Microsoft.Maui.Platform
 			set => _proxy.MauiDatePickerDelegate = value;
 		}
 
-		internal UIDatePicker? DatePickerDialog { get { return InputView as UIDatePicker; } }
+		internal static UIDatePicker? DatePickerDialog { get { return InputView as UIDatePicker; } }
 
 		class UIDatePickerProxy
 		{

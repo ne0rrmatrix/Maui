@@ -6,11 +6,11 @@ namespace Microsoft.Maui.TestCases.Tests.Issues;
 
 public class Issue1704 : _IssuesUITest
 {
-	#if ANDROID
-	const string OnLoad="ON LOAD";
-	const string OnStart ="ON START";
-	const string Source="SOURCE";
-	const string Misc="MISC";
+#if ANDROID
+	const string OnLoad = "ON LOAD";
+	const string OnStart = "ON START";
+	const string Source = "SOURCE";
+	const string Misc = "MISC";
 #else
 	const string OnLoad="On Load";
 	const string OnStart ="On Start";
@@ -32,13 +32,13 @@ public class Issue1704 : _IssuesUITest
 		App.FindElement(OnStart);
 		App.FindElement(Source);
 		App.FindElement(Misc);
-	
+
 		App.Tap(OnLoad);
 		App.Tap(OnStart);
 		App.WaitForElement("Start Animation");
 		App.Tap("Start Animation");
 		App.Tap("Stop Animation");
-	
+
 		App.Tap(Misc);
 		App.WaitForElement("Start Animation");
 		App.Tap("Start Animation");

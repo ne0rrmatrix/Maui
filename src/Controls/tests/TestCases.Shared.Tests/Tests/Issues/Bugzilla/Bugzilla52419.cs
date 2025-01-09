@@ -24,24 +24,24 @@ public class Bugzilla52419 : _IssuesUITest
 
 	public override string Issue => "[A] OnAppearing called for previous pages in a tab's navigation when switching active tabs";
 
-	 [Test]
-	 [Category(UITestCategories.TabbedPage)]
-	 public void Bugzilla52419Test()
-	 {
+	[Test]
+	[Category(UITestCategories.TabbedPage)]
+	public void Bugzilla52419Test()
+	{
 		App.WaitForElementTillPageNavigationSettled(PushNewPage);
-	 	App.Tap(PushNewPage);
+		App.Tap(PushNewPage);
 		App.WaitForElementTillPageNavigationSettled(PushNewPage);
-	 	App.Tap(PushNewPage);
+		App.Tap(PushNewPage);
 		App.WaitForElementTillPageNavigationSettled(PushNewPage);
-	 	App.Tap(PushNewPage);
+		App.Tap(PushNewPage);
 		App.WaitForElementTillPageNavigationSettled(TabPage2);
-	 	App.Tap(TabPage2);
-	 	App.Tap(TabPage1);
-	 	App.Tap(TabPage2);
-	 	App.Tap(TabPage1);
+		App.Tap(TabPage2);
+		App.Tap(TabPage1);
+		App.Tap(TabPage2);
+		App.Tap(TabPage1);
 		App.WaitForElement(PushNewPage);
-	 	App.TapBackArrow(BackButtonIdentifier);
-	 	App.WaitForElement(AppearanceLabel);
-	 	Assert.That(App.WaitForElement(AppearanceLabel).GetText(), Is.EqualTo("Times Appeared: 2"));
-	 }
+		App.TapBackArrow(BackButtonIdentifier);
+		App.WaitForElement(AppearanceLabel);
+		Assert.That(App.WaitForElement(AppearanceLabel).GetText(), Is.EqualTo("Times Appeared: 2"));
+	}
 }

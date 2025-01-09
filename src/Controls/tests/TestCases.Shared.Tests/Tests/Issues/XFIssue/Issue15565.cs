@@ -30,13 +30,13 @@ public class Issue15565 : _IssuesUITest
 #if WINDOWS // In Windows the Page 1 items are inside the root navViewItem which shows in popup, so we need to tap it once to make them visible..
 		App.Tap("navViewItem");
 #endif
-        var titleView = App.WaitForElement("title 1").GetRect();
-        var topTab = App.WaitForElement(Page1).GetRect();
- 
-        var titleViewBottom = titleView.Y + titleView.Height;
-        var topTabTop = topTab.Y;
- 
-        Assert.That(topTabTop, Is.GreaterThanOrEqualTo(titleViewBottom), "Title View is incorrectly positioned in iOS 16");
+		var titleView = App.WaitForElement("title 1").GetRect();
+		var topTab = App.WaitForElement(Page1).GetRect();
+
+		var titleViewBottom = titleView.Y + titleView.Height;
+		var topTabTop = topTab.Y;
+
+		Assert.That(topTabTop, Is.GreaterThanOrEqualTo(titleViewBottom), "Title View is incorrectly positioned in iOS 16");
 	}
 
 
@@ -51,7 +51,7 @@ public class Issue15565 : _IssuesUITest
 	public void NoDuplicateTitleViews()
 	{
 		App.WaitForElement("title 1");
-		ValidateElementsCount("title 1");     
+		ValidateElementsCount("title 1");
 		TapTopTab(Page1);
 		TapTopTab(Page2);
 		TapTopTab(Page3);
@@ -63,7 +63,7 @@ public class Issue15565 : _IssuesUITest
 #if WINDOWS
 		App.Tap("navViewItem");
 #endif
-		App.Tap(tab);		
+		App.Tap(tab);
 	}
 	void ValidateElementsCount(string element)
 	{

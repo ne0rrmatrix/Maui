@@ -102,7 +102,7 @@ namespace Microsoft.Maui.Platform
 		{
 			if (!(OperatingSystem.IsIOSVersionAtLeast(14) || OperatingSystem.IsTvOSVersionAtLeast(14)))
 			{
-				UpdateCornerRadius();
+				MauiPageControl.UpdateCornerRadius();
 				return;
 			}
 
@@ -125,7 +125,7 @@ namespace Microsoft.Maui.Platform
 			}
 		}
 
-		void UpdateCornerRadius()
+		static void UpdateCornerRadius()
 		{
 			foreach (var view in Subviews)
 			{
